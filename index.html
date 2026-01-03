@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starbucks Landing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <header class="header">
+    <div class="container">
+      <a href="#!" class="logo text-gradient header__logo">Лисохмара Н. І.</a>
+
+      <nav class="header__nav">
+        <a href="#history" class="header__link">Про адвоката</a>
+        <a href="#products" class="header__link">Послуги</a>
+        <a href="#events" class="header__link">Військовим</a>
+        <a href="#contacts" class="header__link">Контакти</a>
+      </nav>
+      
+      <script>
+        const headerNav = document.querySelector('.header__nav');
+      
+        function toggleHeaderNav() {
+          if (window.innerWidth <= 850) {
+            headerNav.style.display = 'none';
+          } else {
+            headerNav.style.display = 'flex';
+          }
+        }
+      
+        // при завантаженні
+        toggleHeaderNav();
+      
+        // при зміні розміру
+        window.addEventListener('resize', toggleHeaderNav);
+      </script>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="welcome">
+      <div class="container">
+        <div class="welcome__desc">
+          <h1 class="title welcome__title">Адвокат&nbsp;<span class="text-gradient">
+              Лисохмара Наталія</span></h1>
+          <p class="welcome__text">
+          22 роки юридичного досвіду.&nbsp;
+          Професійна допомога адвоката — зрозуміло і доступно!
+          </p>
+          <div class="welcome__btns-wrapper">
+            <a href="#contacts" class="btn">Консультація</a>
+            <a href="#products" class="link">Послуги</a>
+          </div>
+          <div class="stats">
+            <p class="stats__item">
+              <span class="stats__num">22</span>
+              Років
+              Досвіду
+            </p>
+            <p class="stats__item">
+              <span class="stats__num">1k</span>
+              Наданих
+              Консультацій
+            </p>
+            <p class="stats__item">
+              <span class="stats__num">3</span>
+              Області Роботи
+            </p>
+          </div>
+        </div>
+
+        <div class="welcome__img-wrapper">
+          <img src="./images/Libra.png" style="opacity: 1.0;" alt="" class="welcome__img">
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits" class="benefits">
+      <div class="container benefits__container">
+
+        <div class="benefits__item">
+          <div class="benefits__img-wrapper">
+            <img src="images/icons/3d/heart.png" alt="" class="benefits__icon benefits__heart">
+          </div>
+          <p class="benefits__title">Безкоштовна консультація</p>
+          <p class="benefits__desc">Оцінка ситуації
+          та перспектив</p>
+        </div>
+
+
+        <div class="benefits__item">
+          <div class="benefits__img-wrapper">
+            <img src="images/icons/3d/rocket.png" alt="" class="benefits__icon benefits__rocket">
+          </div>
+          <p class="benefits__title">Військове право</p>
+          <p class="benefits__desc">ВЛК, оскарження,
+          звільнення зі служби</p>
+        </div>
+
+
+        <div class="benefits__item">
+          <div class="benefits__img-wrapper">
+            <img src="images/icons/3d/money.png" alt="" class="benefits__icon benefits__money">
+          </div>
+          <p class="benefits__title">Адвокатський супровід</p>
+          <p class="benefits__desc">Від документів
+          до результату</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="history" class="history">
+      <div class="container">
+        <div class="history__img-wrapper">
+          <img src="./images/portrait.jpg" alt="" class="history__img">
+        </div>
+
+        <div class="history__text">
+          <h2 class="title history__title">Професійний <span class="text-gradient">підхід</span></h2>
+          <p class="history__desc">Адвокат Лисохмара Іванівна —
+          22 роки практичного досвіду в юриспруденції.
+
+          Вища юридична освіта, постійне підвищення
+          кваліфікації та адвокатська практика
+          відповідно до законодавства України.</p>
+          <img src="./images/libra-small.png" style="opacity: 0.0;"alt="" class="history__pic">
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="products">
+      <div class="container">
+        <div class="text-row">
+          <h2 class="title text-row__title">Основні <span class="text-gradient">Послуги</span></h2>
+          <p class="text-row__desc">Допомога адвоката має бути зрозумілою та доступною. <span class="hide-text-mobile">Пояснюю правові питання просто, без зайвої складності та формальностей.</span></p>
+        </div>
+
+        <div class="products__cards">
+          <div class="card">
+            <div class="benefit-photo">
+              <img src="images/cups/green.png" alt="">
+            </div>
+            
+            <p class="card__title">Військове право</p>
+            <p class="card__desc">ВЛК, відстрочка, оскарження рішень</p>
+            <button class="btn card__btn js-open">Детальніше</button>
+            <div class="card__overlay">
+              <p class="card__text">
+                Юридичний супровід у відповідному напрямку.
+                Детальний аналіз ситуації, підготовка документів
+                та захист ваших прав до результату.
+              </p>
+              <a href="#contacts" class="btn card__contact">Звʼязатися</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="benefit-photo">
+              <img src="images/cups/brown.png" alt="">
+            </div>
+            <p class="card__title">Сімейне право</p>
+            <p class="card__desc">Розірвання шлюбу, сімейні спори</p>
+            <button class="btn card__btn js-open">Детальніше</button>
+            <div class="card__overlay">
+              <p class="card__text">
+                Юридичний супровід у відповідному напрямку.
+                Детальний аналіз ситуації, підготовка документів
+                та захист ваших прав до результату.
+              </p>
+              <a href="#contacts" class="btn card__contact">Звʼязатися</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="benefit-photo">
+              <img src="images/cups/land.png" alt="">
+            </div>
+            <p class="card__title">Земельне право</p>
+            <p class="card__desc">Земельні питання, правові висновки</p>
+            <button class="btn card__btn js-open">Детальніше</button>
+            <div class="card__overlay">
+              <p class="card__text">
+                Юридичний супровід у відповідному напрямку.
+                Детальний аналіз ситуації, підготовка документів
+                та захист ваших прав до результату.
+              </p>
+              <a href="#contacts" class="btn card__contact">Звʼязатися</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="benefit-photo">
+              <img src="images/cups/buisness.png" alt="">
+            </div>
+            <p class="card__title">Господарське право</p>
+            <p class="card__desc">Правовий супровід бізнесу</p>
+            <button class="btn card__btn js-open">Детальніше</button>
+            <div class="card__overlay">
+              <p class="card__text">
+                Юридичний супровід у відповідному напрямку.
+                Детальний аналіз ситуації, підготовка документів
+                та захист ваших прав до результату.
+              </p>
+              <a href="#contacts" class="btn card__contact">Звʼязатися</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="events" class="events">
+      <div class="container">
+        <div class="text-row text-row--reverse">
+          <h2 class="title text-row__title">Актуальна <span class="text-gradient">Допомога</span></h2>
+          <p class="text-row__desc">Захист прав військовослужбовців та їхніх родин. Супровід у ключових правових питаннях — від консультації до результату.</p>
+        </div>
+
+        <div class="events__inner-wrapper">
+          <div class="event event--price">
+            <h3 class="event__title">Звільнення з військової служби</h3>
+            <a href="#!" class="btn event__btn js-open">Детальніше</a>
+            <div class="event__overlay">
+              <p class="event__text">
+                Юридичний супровід у відповідному напрямку. Детальний аналіз ситуації,
+                підготовка документів та захист ваших прав до результату.
+              </p>
+              <a href="#contacts" class="btn event__contact">Звʼязатися</a>
+            </div>
+          </div>
+          <div class="event event--kitchen">
+            <h3 class="event__title">Оскарження ВЛК</h3>
+            <a href="#!" class="btn event__btn js-open">Детальніше</a>
+            <div class="event__overlay">
+              <p class="event__text">
+                Юридичний супровід у відповідному напрямку. Детальний аналіз ситуації,
+                підготовка документів та захист ваших прав до результату.
+              </p>
+              <a href="#contacts" class="btn event__contact">Звʼязатися</a>
+            </div>
+          </div>
+          <div class="event event--free">
+            <h3 class="event__title">ЕКОПФО та інвалідність</h3>
+            <a href="#!" class="btn event__btn js-open">Детальніше</a>
+            <div class="event__overlay">
+              <p class="event__text">
+                Юридичний супровід у відповідному напрямку. Детальний аналіз ситуації,
+                підготовка документів та захист ваших прав до результату.
+              </p>
+              <a href="#contacts" class="btn event__contact">Звʼязатися</a>
+            </div>
+          </div>
+          <div class="event event--social">
+            <h3 class="event__title">Адвокатський супровід ВЛК</h3>
+            <a href="#!" class="btn event__btn js-open">Детальніше</a>
+            <div class="event__overlay">
+              <p class="event__text">
+                Юридичний супровід у відповідному напрямку. Детальний аналіз ситуації,
+                підготовка документів та захист ваших прав до результату.
+              </p>
+              <a href="#contacts" class="btn event__contact">Звʼязатися</a>
+            </div>
+          </div>
+          <div class="event event--choose">
+            <h3 class="event__title">Рапорти та заяви</h3>
+            <a href="#!" class="btn event__btn js-open">Детальніше</a>
+            <div class="event__overlay">
+              <p class="event__text">
+                Юридичний супровід у відповідному напрямку. Детальний аналіз ситуації,
+                підготовка документів та захист ваших прав до результату.
+              </p>
+              <a href="#contacts" class="btn event__contact">Звʼязатися</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts" class="contacts">
+      <div class="container">
+        <div class="contacts__text">
+          <h2 class="title contacts__title">
+            Контакти <span class="text-gradient">для звʼязку</span>
+          </h2>
+
+          <p class="contacts__desc">
+            Зв’язок здійснюється <strong>виключно через Telegram</strong>.
+            Напишіть — відповім максимально швидко та надам первинну консультацію.
+          </p>
+
+          <a href="https://t.me/+380933946977"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="contact-link">
+            Написати в Telegram
+          </a>
+        </div>
+
+        <div class="contacts__map-wrapper">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6094.72548255885!2d24.039789257947795!3d49.827800257931514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add5bb0f19821%3A0xb5b034c86492843!2z0LLRg9C70LjRhtGPINCS0L7QtNC-0LPRltC90L3QsCwgMiwg0JvRjNCy0ZbQsiwg0JvRjNCy0ZbQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1suk!2sua!4v1767459306368!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__row">
+        <a href="#!" class="logo text-gradient footer__logo"> Адвокат <br> Лисохмара Наталія</a>
+
+        <nav class="footer__nav">
+          <div class="footer__nav-col">
+            <a href="#!" class="footer__nav-link">Main</a>
+            <a href="#!" class="footer__nav-link">Buy</a>
+            <a href="#!" class="footer__nav-link">More</a>
+          </div>
+          <div class="footer__nav-col">
+            <a href="#!" class="footer__nav-link">We make</a>
+            <a href="#!" class="footer__nav-link">Process</a>
+          </div>
+          <div class="footer__nav-col">
+            <a href="#!" class="footer__nav-link">Products</a>
+            <a href="#!" class="footer__nav-link">Cappuccino</a>
+            <a href="#!" class="footer__nav-link">Fast</a>
+            <a href="#!" class="footer__nav-link">Latte</a>
+          </div>
+          <div class="footer__nav-col">
+            <a href="#!" class="footer__nav-link">Events</a>
+            <a href="#!" class="footer__nav-link">Drinks</a>
+            <a href="#!" class="footer__nav-link">Eat</a>
+          </div>
+        </nav>
+  
+        <a href="#top" class="footer__up-link">
+          <img src="./images/icons/arrow.svg" alt="" class="footer__arrow">
+        </a>
+      </div>
+
+      <a href="https://t.me/+380933946977" target="_blank" rel="noopener noreferrer" class="footer__phone text-gradient">+380-933-94-69-77</a>
+    </div>
+  </footer>
+  <script>
+    const isMobileOrTablet = () => window.innerWidth < 1024;
+    const events = document.querySelectorAll('.event');
+    const cards = document.querySelectorAll('.card');
+
+    function closeAll() {
+      events.forEach(card => card.classList.remove('is-active'));
+      cards.forEach(card => card.classList.remove('is-active'));
+    }
+
+    function toggleCard(card) {
+      const isOpen = card.classList.contains('is-active');
+      closeAll();
+      if (!isOpen) card.classList.add('is-active');
+    }
+
+    events.forEach(card => {
+      const btn = card.querySelector('.js-open');
+
+      // DESKTOP — тільки кнопка
+      if (btn) {
+        btn.addEventListener('click', e => {
+          if (!isMobileOrTablet()) {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleCard(card);
+          }
+        });
+      }
+
+      // MOBILE / TABLET — весь банер
+      card.addEventListener('click', e => {
+        if (isMobileOrTablet()) {
+          if (e.target.closest('.event__contact')) return;
+          toggleCard(card);
+        }
+      });
+    });
+
+    cards.forEach(card => {
+      const btn = card.querySelector('.js-open');
+
+      // DESKTOP — кнопка
+      if (btn) {
+        btn.addEventListener('click', e => {
+          if (!isMobileOrTablet()) {
+            e.preventDefault();
+            e.stopPropagation();
+            cards.forEach(c => c.classList.remove('is-active'));
+            card.classList.add('is-active');
+          }
+        });
+      }
+
+      // MOBILE — весь card
+      card.addEventListener('click', e => {
+        if (isMobileOrTablet()) {
+          if (e.target.closest('.card__contact')) return;
+          cards.forEach(c => c.classList.remove('is-active'));
+          card.classList.add('is-active');
+        }
+      });
+    });
+
+    // 🔒 клік поза банером — закриття
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.event') && !e.target.closest('.card')) {
+        closeAll();
+      }
+    });
+  </script>
+</body>
+</html>
