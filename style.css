@@ -497,7 +497,7 @@ a:hover, button:hover {
 }
 
 .benefits__heart {
-  width: 160px;
+  width: 180px;
   top: calc(50% + 10px);
   left: calc(50% + 5px);
 
@@ -508,7 +508,7 @@ a:hover, button:hover {
   left: calc(50% - 10px);
 }
 .benefits__money {
-  width: 180px;
+  width: 160px;
 }
 
 .benefits__title {
