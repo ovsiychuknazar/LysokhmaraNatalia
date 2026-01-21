@@ -986,12 +986,12 @@ a:hover, button:hover {
 }
 
 .event--price {
-  background-image: url("./images/events/1.webp");
+  background-image: url("./images/events/1.jpg");
   grid-area: price;
 }
 
 .event--kitchen {
-  background-image: url("./images/events/2.jpeg");
+  background-image: url("./images/events/2.jpg");
   grid-area: kitchen;
 }
 
@@ -1027,7 +1027,7 @@ a:hover, button:hover {
 }
 
 .event--choose {
-  background-image: url("./images/events/5.jpeg");
+  background-image: url("./images/events/5.jpg");
   grid-area: choose;
 }
 
